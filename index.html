@@ -4,182 +4,343 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sijalo, viajes a la medida por México</title>
-  <meta name="description" content="Armamos tu viaje por México a la medida: con amigos, en familia, entre mujeres o de aventura. Cotiza por WhatsApp.">
+  <meta name="description" content="Armamos tu viaje por México a la medida: con amigos, entre mujeres, en familia o de aventura. Huasteca, Hidalgo, Oaxaca, Bacalar y más. Cotiza por WhatsApp.">
   <link rel="canonical" href="https://sijalo.com.mx/">
   <meta property="og:title" content="Sijalo: ¿sí jalas?">
   <meta property="og:description" content="Viajes a la medida por México. Tú dices a dónde; nosotros lo armamos.">
   <meta property="og:url" content="https://sijalo.com.mx/">
+  <meta property="og:image" content="https://sijalo.com.mx/img/dunas-viajera.webp">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_MX">
   <meta name="theme-color" content="#1d2f6f">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="img/dunas-viajera.webp" imagesrcset="img/dunas-viajera-s.webp 800w, img/dunas-viajera.webp 1600w" imagesizes="100vw">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,500..900&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,500..900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="config.js"></script>
+  <script src="data.js"></script>
   <!-- Analytics: Umami Cloud (no cookies). Uncomment and set the website id once the account exists.
   <script defer src="https://cloud.umami.is/script.js" data-website-id="UMAMI_WEBSITE_ID"></script>
   -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"TravelAgency","name":"Sijalo","url":"https://sijalo.com.mx/","areaServed":"MX","description":"Viajes a la medida por México."}
+  {"@context":"https://schema.org","@type":"TravelAgency","name":"Sijalo","url":"https://sijalo.com.mx/","image":"https://sijalo.com.mx/img/dunas-viajera.webp","areaServed":{"@type":"Country","name":"México"},"description":"Viajes a la medida por México: con amigos, entre mujeres, en familia y de aventura."}
   </script>
 </head>
 <body>
-  <a class="skip" href="#cotiza">Ir a cotizar</a>
+  <a class="skip" href="#arma">Ir a armar mi viaje</a>
 
-  <header class="top">
+  <header class="top" id="top">
     <a class="logo" href="/" aria-label="Sijalo, inicio">si<span>jalo</span></a>
     <nav aria-label="Principal">
-      <a href="#como">Cómo funciona</a>
-      <a href="#ideas">Ideas</a>
+      <a href="#estilos">Estilos</a>
+      <a href="#destinos">Destinos</a>
+      <a href="#temporadas">Temporadas</a>
       <a href="#preguntas">Preguntas</a>
-      <a class="nav-cta" href="#cotiza" data-umami-event="nav-cotiza">Cotizar</a>
+      <a class="nav-cta" href="#arma" data-umami-event="nav-arma">Arma tu viaje</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <h1>¿Sí jalas?</h1>
-        <p class="lede">Viajes a la medida por México. Tú dices a dónde, con quién y cuánto quieres gastar; nosotros armamos todo: transporte, hospedaje, entradas y guía.</p>
-        <div class="hero-actions">
-          <a class="btn btn-sun" href="#cotiza" data-umami-event="hero-cotiza">Cotizar mi viaje</a>
-          <a class="btn btn-line wa-link" href="#cotiza" data-umami-event="hero-whatsapp" data-wa-text="Hola, quiero cotizar un viaje con Sijalo">Escribir por WhatsApp</a>
-        </div>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" id="hero-slides">
+        <img class="slide on" src="img/dunas-viajera.webp" srcset="img/dunas-viajera-s.webp 800w, img/dunas-viajera.webp 1600w" sizes="100vw" alt="Viajera con chamarra rosa caminando entre las Dunas Rojas de Hidalgo, con neblina" fetchpriority="high" data-place="Dunas Rojas, Hidalgo" data-to="a las Dunas Rojas">
+        <img class="slide" data-src="huasteca" alt="Cascada de Tamul y río turquesa en la Huasteca Potosina" data-place="Cascada de Tamul, San Luis Potosí" data-to="a la Huasteca">
+        <img class="slide" data-src="bacalar" alt="Laguna de Bacalar color turquesa con lanchas" data-place="Laguna de Bacalar, Quintana Roo" data-to="a Bacalar">
+        <img class="slide" data-src="hierve" alt="Cascada petrificada de Hierve el Agua sobre el valle de Oaxaca" data-place="Hierve el Agua, Oaxaca" data-to="a Oaxaca">
+        <img class="slide" data-src="catorce" alt="Pueblo de Real de Catorce entre montañas del desierto" data-place="Real de Catorce, San Luis Potosí" data-to="a Real de Catorce">
       </div>
-
-      <div class="chat" aria-label="Ejemplo de conversación de un grupo planeando un viaje" role="img">
-        <div class="chat-head">
-          <span class="chat-avatar" aria-hidden="true">🌵</span>
-          <div><strong>Las del depa ✈️</strong><small>Mariana, Fer, Pau, tú</small></div>
-        </div>
-        <div class="chat-body">
-          <p class="msg in" style="--d:0"><b>Mariana</b>¿Y si nos vamos a Huasca el puente?</p>
-          <p class="msg in" style="--d:1"><b>Fer</b>Va, pero que alguien lo organice 🙏</p>
-          <p class="msg in" style="--d:2"><b>Pau</b>Ya le escribí a Sijalo, mañana nos mandan opciones</p>
-          <p class="msg out" style="--d:3">¡Sí jalo! 🙌</p>
-          <p class="msg out" style="--d:4">Yo también</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="who" aria-labelledby="who-title">
-      <h2 id="who-title">Para cada tipo de viaje</h2>
-      <ul class="who-grid">
-        <li class="who-item w-friends">
-          <h3>Con amigos</h3>
-          <p>Escapadas de fin de semana y puentes que sí se concretan. Una persona nos escribe y el grupo solo aparta su lugar.</p>
-        </li>
-        <li class="who-item w-women">
-          <h3>Entre mujeres</h3>
-          <p>Viajes con amigas, mamá o hermanas, con hospedaje y transporte de confianza y acompañamiento todo el camino.</p>
-        </li>
-        <li class="who-item w-family">
-          <h3>En familia</h3>
-          <p>Ritmo para niños y abuelos, horarios sin prisas y lugares pensados para todas las edades.</p>
-        </li>
-        <li class="who-item w-adventure">
-          <h3>De aventura</h3>
-          <p>Cascadas, grutas, rappel, senderismo y campamento, con guías locales y el equipo que haga falta.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="how" id="como" aria-labelledby="how-title">
-      <h2 id="how-title">Cómo funciona</h2>
-      <ol class="steps">
-        <li><h3>Nos cuentas tu idea</h3><p>Destino (o "no sé, sorpréndanme"), fechas, cuántos van y tu presupuesto.</p></li>
-        <li><h3>Te mandamos una propuesta</h3><p>Itinerario, qué incluye y qué no, y el precio por persona. La ajustamos hasta que quede.</p></li>
-        <li><h3>Apartas tu lugar</h3><p>Con un anticipo y el resto antes de salir. Cada quien del grupo puede pagar lo suyo.</p></li>
-        <li><h3>Viajas sin pendientes</h3><p>Te acompañamos antes, durante y después del viaje, por WhatsApp y en persona.</p></li>
-      </ol>
-    </section>
-
-    <section class="ideas" id="ideas" aria-labelledby="ideas-title">
-      <div class="ideas-head">
-        <h2 id="ideas-title">¿No sabes a dónde? Empieza por aquí</h2>
-        <p>Algunos destinos que armamos seguido. Cualquiera se adapta a tus fechas, tu grupo y tu presupuesto.</p>
-      </div>
-      <ul class="dest">
-        <li><a href="#cotiza" data-dest="Huasca y Real del Monte" data-umami-event="idea" data-umami-event-dest="huasca"><span>Huasca y Real del Monte</span><small>Hidalgo</small><em>Pueblos mágicos y prismas basálticos</em></a></li>
-        <li><a href="#cotiza" data-dest="Grutas de Tolantongo" data-umami-event="idea" data-umami-event-dest="tolantongo"><span>Grutas de Tolantongo</span><small>Hidalgo</small><em>Aguas termales y campamento</em></a></li>
-        <li><a href="#cotiza" data-dest="Peña de Bernal y viñedos" data-umami-event="idea" data-umami-event-dest="bernal"><span>Peña de Bernal y viñedos</span><small>Querétaro</small><em>Queso, vino y monolito</em></a></li>
-        <li><a href="#cotiza" data-dest="Huasteca Potosina" data-umami-event="idea" data-umami-event-dest="huasteca"><span>Huasteca Potosina</span><small>San Luis Potosí</small><em>Cascadas y ríos turquesa</em></a></li>
-        <li><a href="#cotiza" data-dest="Cuetzalan" data-umami-event="idea" data-umami-event-dest="cuetzalan"><span>Cuetzalan</span><small>Puebla</small><em>Niebla, cascadas y café</em></a></li>
-        <li><a href="#cotiza" data-dest="Malinalco" data-umami-event="idea" data-umami-event-dest="malinalco"><span>Malinalco</span><small>Estado de México</small><em>Zona arqueológica y descanso</em></a></li>
-        <li><a href="#cotiza" data-dest="San Miguel de Allende" data-umami-event="idea" data-umami-event-dest="sma"><span>San Miguel de Allende</span><small>Guanajuato</small><em>Calles, arte y comida</em></a></li>
-        <li><a href="#cotiza" data-dest="Día de Muertos en Michoacán" data-umami-event="idea" data-umami-event-dest="muertos"><span>Día de Muertos en Michoacán</span><small>Pátzcuaro y Janitzio</small><em>Temporada</em></a></li>
-      </ul>
-    </section>
-
-    <section class="quote" id="cotiza" aria-labelledby="quote-title">
-      <div class="quote-copy">
-        <h2 id="quote-title">Cotiza tu viaje</h2>
-        <p>Llena lo que sepas y te abrimos WhatsApp con el mensaje listo. Respondemos con una propuesta, sin compromiso.</p>
-        <p class="fine">No guardamos lo que escribes aquí: solo se arma el mensaje para enviarlo por WhatsApp.</p>
-      </div>
-      <form class="quote-form" id="quote-form" novalidate>
-        <label>Tu nombre
-          <input name="nombre" autocomplete="given-name" required>
-        </label>
-        <label>¿A dónde?
-          <input name="destino" placeholder="Ej. Huasteca Potosina, o “no sé”" list="dest-list">
-          <datalist id="dest-list"></datalist>
-        </label>
-        <div class="row">
-          <label>¿Cuándo?
-            <input name="fechas" placeholder="Ej. puente de noviembre">
-          </label>
-          <label>¿Cuántos van?
-            <input name="personas" inputmode="numeric" placeholder="Ej. 6">
-          </label>
-        </div>
-        <fieldset>
-          <legend>Tipo de viaje</legend>
-          <div class="chips">
-            <label class="chip"><input type="radio" name="tipo" value="con amigos"><span>Con amigos</span></label>
-            <label class="chip"><input type="radio" name="tipo" value="entre mujeres"><span>Entre mujeres</span></label>
-            <label class="chip"><input type="radio" name="tipo" value="en familia"><span>En familia</span></label>
-            <label class="chip"><input type="radio" name="tipo" value="de aventura"><span>De aventura</span></label>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">¿Sí jalas?<span class="sr-only"> Viajes a la medida por México</span></h1>
+          <p class="hero-to" aria-hidden="true"><span id="hero-to">a las Dunas Rojas</span></p>
+          <p class="lede">Viajes a la medida por México. Tú dices a dónde, con quién y cuánto quieres gastar; nosotros armamos transporte, hospedaje, actividades y te acompañamos todo el camino.</p>
+          <div class="hero-actions">
+            <a class="btn btn-sun" href="#arma" data-umami-event="hero-arma">Arma tu viaje</a>
+            <a class="btn btn-glass" href="#destinos" data-umami-event="hero-destinos">Ver destinos</a>
           </div>
-        </fieldset>
-        <label>Presupuesto aproximado por persona
-          <select name="presupuesto">
-            <option value="">Prefiero que me propongan</option>
-            <option>Menos de $2,000</option>
-            <option>$2,000 a $5,000</option>
-            <option>$5,000 a $10,000</option>
-            <option>Más de $10,000</option>
-          </select>
-        </label>
-        <p class="form-error" id="form-error" role="alert" hidden></p>
-        <button class="btn btn-sun" type="submit">Enviar por WhatsApp</button>
-      </form>
+        </div>
+        <div class="chat" role="img" aria-label="Ejemplo de un grupo de amigas decidiendo viajar con Sijalo">
+          <div class="chat-head">
+            <span class="chat-avatar" aria-hidden="true">🌵</span>
+            <div><strong>Las del depa ✈️</strong><small>Mariana, Fer, Pau, tú</small></div>
+          </div>
+          <div class="chat-body">
+            <p class="msg in" style="--d:0"><b>Mariana</b>Vi unas dunas rojas en Hidalgo 😱</p>
+            <p class="msg in" style="--d:1"><b>Pau</b>Ya le escribí a Sijalo, mañana nos mandan opciones</p>
+            <p class="msg out big" style="--d:2">¡Sí jalo! 🙌</p>
+          </div>
+        </div>
+      </div>
+      <p class="hero-place" id="hero-place">Dunas Rojas, Hidalgo</p>
+      <div class="hero-dots" id="hero-dots" aria-hidden="true"></div>
     </section>
 
+    <!-- PROMISE STRIP -->
+    <section class="promise" aria-label="Lo que incluye viajar con Sijalo">
+      <ul>
+        <li><strong>100 % a la medida</strong><span>Ningún paquete armado: tu fecha, tu grupo, tu presupuesto.</span></li>
+        <li><strong>Todo México</strong><span>De Hidalgo a Bacalar, por carretera o en avión.</span></li>
+        <li><strong>Precio claro por escrito</strong><span>Qué incluye, qué no y cómo se cancela, antes de pagar.</span></li>
+        <li><strong>Pagos en partes</strong><span>Aparta con anticipo; cada quien paga lo suyo.</span></li>
+      </ul>
+    </section>
+
+
+    <!-- MARQUEE: bus destination sign -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marquee"></div>
+    </div>
+
+    <!-- STYLES (tabs) -->
+    <section class="styles" id="estilos" aria-labelledby="styles-title">
+      <div class="wrap">
+        <h2 id="styles-title">¿Con quién vas?</h2>
+        <div class="tabs" role="tablist" aria-label="Estilos de viaje" id="style-tabs"></div>
+        <div class="style-panel" id="style-panel" role="tabpanel" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- FEATURED: our own find -->
+    <section class="feature" aria-labelledby="feature-title">
+      <div class="wrap feature-grid">
+        <figure class="feature-photo">
+          <img src="img/dunas-s.webp" srcset="img/dunas-s.webp 800w, img/dunas.webp 1600w" sizes="(min-width: 900px) 55vw, 100vw" alt="Lomas de tierra roja con rocas grises y bosque al fondo en las Dunas Rojas de Hidalgo" loading="lazy">
+        </figure>
+        <div class="feature-copy">
+          <p class="kicker">Lo encontramos nosotros</p>
+          <h2 id="feature-title">Dunas Rojas, Hidalgo</h2>
+          <p>Lomas de tierra roja entre bosque y neblina, a pocas horas de la CDMX. No sale en las guías y casi nadie lo conoce. Así nos gusta viajar: buscando lugares que valgan la carretera.</p>
+          <a class="btn btn-sun" href="#arma" data-pick="dunas" data-umami-event="feature-dunas">Quiero ir a las Dunas Rojas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section class="dest" id="destinos" aria-labelledby="dest-title">
+      <div class="wrap">
+        <div class="dest-head">
+          <h2 id="dest-title">Destinos para empezar a soñar</h2>
+          <p>Ideas que armamos seguido. Cualquiera se adapta a tus fechas y tu grupo, y si tienes otro destino en mente, también lo armamos.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrar destinos por estilo" id="dest-filters"></div>
+        <ul class="dest-grid" id="dest-grid"></ul>
+      </div>
+    </section>
+
+    <!-- SEASONS -->
+    <section class="seasons" id="temporadas" aria-labelledby="season-title">
+      <div class="wrap">
+        <div class="seasons-head">
+          <h2 id="season-title">¿Cuándo es el mejor momento?</h2>
+          <p>México cambia mes con mes. Elige un mes y te decimos qué está en temporada.</p>
+        </div>
+        <div class="months" role="tablist" aria-label="Meses" id="months"></div>
+        <ul class="season-list" id="season-list" aria-live="polite"></ul>
+      </div>
+    </section>
+
+    <!-- VIDEO REEL -->
+    <section class="reel" aria-labelledby="reel-title">
+      <div class="wrap">
+        <div class="reel-head">
+          <h2 id="reel-title">Así se siente México</h2>
+          <p>Cascadas que retumban y bosques cubiertos de mariposas. Esto es lo que vas a ver en persona.</p>
+        </div>
+        <div class="reel-row">
+          <figure class="clip tall">
+            <video muted loop playsinline preload="none" poster="img/v-monarca.webp" data-src="video/monarca"></video>
+            <figcaption>Santuario de la monarca<span>Michoacán</span></figcaption>
+          </figure>
+          <figure class="clip">
+            <video muted loop playsinline preload="none" poster="img/v-cascada.webp" data-src="video/cascada"></video>
+            <figcaption>El Descabezadero<span>Veracruz</span></figcaption>
+          </figure>
+          <figure class="clip">
+            <video muted loop playsinline preload="none" poster="img/v-eyipantla.webp" data-src="video/eyipantla"></video>
+            <figcaption>Salto de Eyipantla<span>Veracruz</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ITINERARY EXAMPLE -->
+    <section class="itin" aria-labelledby="itin-title">
+      <div class="wrap itin-grid">
+        <div class="itin-photo">
+          <img src="img/huasteca-s.webp" srcset="img/huasteca-s.webp 800w, img/huasteca.webp 1600w" sizes="(min-width: 900px) 40vw, 100vw" alt="Cascada de Tamul cayendo a un río turquesa en la Huasteca Potosina" loading="lazy">
+        </div>
+        <div class="itin-copy">
+          <p class="kicker">Así se ve una propuesta</p>
+          <h2 id="itin-title"></h2>
+          <p class="itin-note" id="itin-note"></p>
+          <ol class="timeline" id="itin-days"></ol>
+          <div class="includes">
+            <h3>Incluye</h3>
+            <ul id="itin-includes"></ul>
+          </div>
+          <a class="btn btn-anil" href="#arma" data-pick="huasteca" data-umami-event="itin-huasteca">Quiero algo así</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section class="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <h2 id="how-title">Cómo funciona</h2>
+        <ol class="steps">
+          <li><h3>Nos cuentas tu idea</h3><p>Con el armador de abajo o por WhatsApp. Si no sabes a dónde, te proponemos.</p></li>
+          <li><h3>Recibes una propuesta</h3><p>Itinerario, qué incluye y qué no, precio por persona y política de cancelación. La ajustamos hasta que quede.</p></li>
+          <li><h3>Apartas tu lugar</h3><p>Con un anticipo por transferencia o tarjeta; el resto, antes de salir. Cada quien paga lo suyo.</p></li>
+          <li><h3>Viajas sin pendientes</h3><p>Te acompañamos antes, durante y después del viaje. Si algo cambia, lo resolvemos nosotros.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TRIP BUILDER -->
+    <section class="builder" id="arma" aria-labelledby="builder-title">
+      <div class="wrap builder-grid">
+        <div class="builder-main">
+          <h2 id="builder-title">Arma tu viaje</h2>
+          <p class="builder-sub">Toma un minuto. Al final te abrimos WhatsApp con todo listo y te respondemos con una propuesta, sin compromiso.</p>
+
+          <form id="builder" novalidate>
+            <ol class="progress" aria-label="Pasos">
+              <li data-step="0">Con quién</li>
+              <li data-step="1">Qué te late</li>
+              <li data-step="2">Cuándo</li>
+              <li data-step="3">Tú</li>
+            </ol>
+
+            <fieldset class="step" data-step="0">
+              <legend>¿Con quién viajas?</legend>
+              <div class="cards" id="b-styles"></div>
+              <label class="field">¿Cuántas personas?
+                <div class="stepper">
+                  <button type="button" data-dec aria-label="Menos personas">−</button>
+                  <input name="personas" type="number" min="1" max="99" value="4" inputmode="numeric">
+                  <button type="button" data-inc aria-label="Más personas">+</button>
+                </div>
+              </label>
+            </fieldset>
+
+            <fieldset class="step" data-step="1" hidden>
+              <legend>¿Qué te late?</legend>
+              <div class="chips" id="b-interests"></div>
+              <label class="field">¿Ya tienes un destino en mente?
+                <input name="destino" list="b-dest-list" placeholder="Ej. Huasteca Potosina, o déjalo vacío y te proponemos">
+                <datalist id="b-dest-list"></datalist>
+              </label>
+            </fieldset>
+
+            <fieldset class="step" data-step="2" hidden>
+              <legend>¿Cuándo y cuánto?</legend>
+              <label class="field">Fechas aproximadas
+                <input name="fechas" placeholder="Ej. puente de noviembre, o del 12 al 15 de diciembre">
+              </label>
+              <div class="field">
+                <span>Días de viaje</span>
+                <div class="chips" id="b-days"></div>
+              </div>
+              <div class="field">
+                <span>Presupuesto por persona</span>
+                <div class="chips" id="b-budget"></div>
+              </div>
+              <label class="field">Salimos desde
+                <input name="origen" value="CDMX">
+              </label>
+            </fieldset>
+
+            <fieldset class="step" data-step="3" hidden>
+              <legend>¿A quién le respondemos?</legend>
+              <label class="field">Tu nombre
+                <input name="nombre" autocomplete="given-name" required>
+              </label>
+              <label class="field">¿Algo más que debamos saber?
+                <textarea name="notas" rows="3" placeholder="Cumpleaños, niños pequeños, alguien con movilidad limitada, mascota…"></textarea>
+              </label>
+              <p class="fine">No guardamos lo que escribes aquí: solo armamos el mensaje que tú envías por WhatsApp.</p>
+            </fieldset>
+
+            <p class="form-error" id="b-error" role="alert" hidden></p>
+            <div class="builder-nav">
+              <button type="button" class="btn btn-ghost" id="b-back" hidden>Atrás</button>
+              <button type="button" class="btn btn-sun" id="b-next">Siguiente</button>
+              <button type="submit" class="btn btn-sun" id="b-send" hidden>Enviar por WhatsApp</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="ticket" aria-label="Resumen de tu viaje">
+          <div class="ticket-img"><img id="t-img" src="img/dunas-s.webp" alt=""></div>
+          <div class="ticket-body">
+            <p class="ticket-label">Tu viaje</p>
+            <p class="ticket-dest" id="t-dest">Destino por definir</p>
+            <dl>
+              <div><dt>Grupo</dt><dd id="t-who">—</dd></div>
+              <div><dt>Plan</dt><dd id="t-what">—</dd></div>
+              <div><dt>Cuándo</dt><dd id="t-when">—</dd></div>
+              <div><dt>Presupuesto</dt><dd id="t-budget">—</dd></div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div>
+          <h2 id="about-title">Somos hermanos y nos gusta viajar en serio</h2>
+        </div>
+        <div class="about-copy">
+          <p>Sijalo nació entre dos hermanos: una que lleva años coordinando viajes grupales por México, con transportistas, guías y hospedajes de confianza, y otro que se encarga de que cotizar, pagar y viajar sea fácil.</p>
+          <p>Armamos cada viaje como si fuéramos nosotros: con tiempos reales, lugares que ya conocemos y alguien a quien escribirle a cualquier hora del viaje.</p>
+          <a class="link" id="ig-about" href="#" rel="noopener" data-umami-event="about-instagram">Míranos viajar en Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
     <section class="faq" id="preguntas" aria-labelledby="faq-title">
-      <h2 id="faq-title">Preguntas frecuentes</h2>
-      <details>
-        <summary>¿Hacen viajes para grupos pequeños o solo para mí?</summary>
-        <p>Sí. Armamos desde un viaje para dos personas hasta grupos grandes. El precio por persona cambia según el tamaño del grupo.</p>
-      </details>
-      <details>
-        <summary>¿Cómo se paga?</summary>
-        <p>Apartas con un anticipo y liquidas antes de la salida. Aceptamos transferencia y pago con tarjeta mediante liga de pago. Cada integrante del grupo puede pagar su parte por separado.</p>
-      </details>
-      <details>
-        <summary>¿Qué incluye un viaje?</summary>
-        <p>Depende de lo que pidas. Normalmente transporte, hospedaje, entradas y coordinación. En cada propuesta te decimos claramente qué incluye y qué no.</p>
-      </details>
-      <details>
-        <summary>¿Salen desde la Ciudad de México?</summary>
-        <p>La mayoría de nuestros viajes salen de la CDMX, pero podemos organizar la salida desde otra ciudad o que se vean directo en el destino.</p>
-      </details>
-      <details>
-        <summary>¿Qué pasa si necesito cancelar?</summary>
-        <p>Cada propuesta incluye su política de cancelación por escrito antes de que pagues, porque depende de los proveedores de cada viaje.</p>
-      </details>
+      <div class="wrap">
+        <h2 id="faq-title">Preguntas frecuentes</h2>
+        <details>
+          <summary>¿Hacen viajes para dos personas o solo grupos grandes?</summary>
+          <p>De todo: desde una pareja hasta grupos de más de 40. El precio por persona baja cuando el grupo crece, porque el transporte y el guía se reparten.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se paga?</summary>
+          <p>Apartas con un anticipo y liquidas antes de la salida, por transferencia o con tarjeta mediante liga de pago. En grupos, cada persona puede pagar su parte por separado.</p>
+        </details>
+        <details>
+          <summary>¿Qué incluye un viaje?</summary>
+          <p>Lo que necesites. Normalmente transporte, hospedaje, entradas, actividades y coordinación. En cada propuesta te decimos por escrito qué incluye y qué no, para que no haya sorpresas.</p>
+        </details>
+        <details>
+          <summary>¿Salen solo de la Ciudad de México?</summary>
+          <p>La mayoría de los viajes por carretera salen de la CDMX, pero armamos salidas desde otras ciudades, viajes en avión o nos vemos directo en el destino.</p>
+        </details>
+        <details>
+          <summary>¿Qué pasa si necesito cancelar?</summary>
+          <p>Cada propuesta trae su política de cancelación por escrito antes de que pagues, porque depende de los hospedajes y transportes de ese viaje.</p>
+        </details>
+        <details>
+          <summary>¿Es seguro viajar con ustedes?</summary>
+          <p>Trabajamos con transporte turístico con permiso y seguro, hospedajes que conocemos y guías locales. Durante el viaje siempre hay alguien de Sijalo localizable.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final" aria-labelledby="final-title">
+      <img src="img/bacalar-s.webp" srcset="img/bacalar-s.webp 800w, img/bacalar.webp 1600w" sizes="100vw" alt="" loading="lazy">
+      <div class="final-inner">
+        <h2 id="final-title">El siguiente viaje del chat, ahora sí.</h2>
+        <a class="btn btn-sun" href="#arma" data-umami-event="final-arma">Arma tu viaje</a>
+      </div>
     </section>
   </main>
 
@@ -189,13 +350,18 @@
       <p>Viajes a la medida por México.</p>
     </div>
     <ul class="foot-links">
-      <li><a class="wa-link" href="#cotiza" data-umami-event="footer-whatsapp" data-wa-text="Hola, quiero información de Sijalo">WhatsApp</a></li>
+      <li><a class="wa-link" href="#arma" data-umami-event="footer-whatsapp" data-wa-text="Hola, quiero información de Sijalo">WhatsApp</a></li>
       <li><a id="ig-link" href="#" rel="noopener" data-umami-event="footer-instagram">Instagram</a></li>
       <li><a id="mail-link" href="#">Correo</a></li>
       <li><a href="privacidad.html">Aviso de privacidad</a></li>
+      <li><a href="creditos.html">Créditos de fotos y videos</a></li>
     </ul>
     <p class="copy">© <span id="year">2026</span> Sijalo</p>
   </footer>
+
+  <a class="wa-float wa-link" href="#arma" data-wa-text="Hola, quiero cotizar un viaje con Sijalo" data-umami-event="float-whatsapp" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.4c.2.2 2.3 3.5 5.6 4.9 2.1.9 2.9 1 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.9-.7Z"/></svg>
+  </a>
 
   <script src="main.js"></script>
 </body>
